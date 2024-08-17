@@ -9,13 +9,8 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 
-let counter = 0;
-//render your react application
-setInterval(() => {
 
-    ReactDOM.createRoot(document.querySelector('#app')).render(<Home count={counter}/>);
-    counter++;
-}
-    , 1000)
+    ReactDOM.createRoot(document.querySelector('#app')).render(<Home/>);
+
 
 
