@@ -3,6 +3,8 @@ import SecondsCounter from "./SecondsCounter.jsx";
 ///
 const Home = (props) => {
 	// const repeat = Array.from({ length: 7 }, (_, index) => (<SecondsCounter key={index} count={props.count} />))
+	const [counter, setCounter] = useState(0);
+	if()
 	let a = props.count;
 	let divValue = [0, 0, 0, 0, 0, 0, 0];
 	let i = 0;
@@ -18,7 +20,7 @@ const Home = (props) => {
 	// Math.floor((props.count % 1000) / 100)
 	// Math.floor((props.count % 100) / 10)
 	return (
-		<div className="container-fluid d-flex justify-content-start bg-dark align-items-center position-relative" style={{ height: `120px` }}>
+		<div className="container-fluid d-flex justify-content-center bg-dark align-items-center position-relative" style={{ height: `120px` }}>
 			<i className="fa-regular fa-clock fs-1 text-white position-absolut"></i>
 			<SecondsCounter count={divValue[6]} />
 			<SecondsCounter count={divValue[5]} />
@@ -27,9 +29,11 @@ const Home = (props) => {
 			<SecondsCounter count={divValue[2]} />
 			<SecondsCounter count={divValue[1]} />
 			<SecondsCounter count={divValue[0]} />
-			<div className="input-group mb-3">
-				<span className="input-group-text" id="basic-addon1">@</span>
-				<input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+			<div className="input-group mb-3 w-25">
+				<div className="w-25">
+					<span className="input-group-text" id="basic-addon1">enter time</span>
+					<input type="text" onChange={(e)=>setCounter(e.target.value)} className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+				</div>
 			</div>
 		</div>
 
